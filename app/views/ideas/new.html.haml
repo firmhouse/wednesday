@@ -1,0 +1,21 @@
+%h1 Add a new idea
+
+- if @idea.errors.any?
+  .alert 
+    %p.header Cannot save this idea, please correct the following:
+    - @idea.errors.full_messages.each do |error|
+      %p.message= error
+
+= form_for(@idea) do |form|
+  .input.fancy_label
+    = form.label :title, "Summarize the idea"
+    = form.text_field :title, :class => "title"
+  
+  .input.fancy_label
+    = form.label :description, "Describe the idea"
+    = form.text_area :description, :style => "height: 400px;"
+  
+  .submit
+    = submit_tag "Add this idea", :class => "button"
+    or
+    = link_to "Cancel", ideas_path, :class => "cancel"

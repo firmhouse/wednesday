@@ -1,0 +1,43 @@
+@import "fancy_labels";
+
+form {
+  .input {
+    margin: 10px 20px;
+    label {
+      color: #555;
+      font-size: 16px;
+      line-height: 30px;
+    }
+    
+    input {
+      font-size: 14px;
+      padding: 5px;
+      width: 578px;
+      &.title {
+        font-size: 18px;
+      }
+    }
+    
+    textarea {
+      font-size: 14px;
+      padding: 5px;
+      width: 580px;
+      -webkit-appearance: textfield;
+    }
+  }
+  
+  .submit {
+    margin: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    .button {
+      font-size: 14px;
+    }
+  }
+  
+  .field_with_errors {
+    label {
+      color: #a00;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+// Import the non-default scaffolding module to help us get started.
+@import "blueprint/scaffolding";
+
+// This configuration will only apply the
+// blueprint styles to pages with a body class of "bp"
+// This makes it easier to have pages without blueprint styles
+// when you're using a single/combined stylesheet.
+
+body.bp {
+  @include blueprint-typography(true);
+  @include blueprint-utilities;
+  @include blueprint-debug;
+  @include blueprint-interaction; }
+
+// Remove the scaffolding when you're ready to start doing visual design.
+// Or leave it in if you're happy with how blueprint looks out-of-the-box
+@include blueprint-scaffolding("body.bp");
+
+
+@import "compass/css3";
+
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  background-color: #f0f0f0;
+  background-image: url(/images/background.png);
+}
+
+#header {
+  font-weight: bold;
+  font-size: 40px;
+  @include text-shadow(#fff, 0, 1px, 0);
+  a {
+    color: #555;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #000;
+  }
+}
+
+body.two-col #container.content_area {
+  margin-top: 20px;
+  border: 2px solid #ccc;
+  background-color: #FFF;
+  @include border-radius(3px);
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 20px;
+}
+
+.submit {
+  font-size: 13px;
+  a.cancel {
+    color: red;
+  }
+}
+
+p {
+  margin: 15px 0;
+}

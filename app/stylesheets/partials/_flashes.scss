@@ -1,0 +1,21 @@
+.alert {
+  margin: 10px 20px;
+  margin-bottom: 20px;
+  background-color: lighten(#c00, 55%);
+  border: 1px solid lighten(#c00, 52%);
+  color: #a00;
+  @include box-shadow(#ededed, 0, 2px, 2px);
+  p {
+    margin: 10px;
+    line-height: 1.5em;
+  }
+  
+  p.header {
+    @include text-shadow(lighten(#c00, 60%), 0, 1px, 0);
+  }
+
+  p.message {
+    color: #000;
+    font-size: 13px;
+  }
+}

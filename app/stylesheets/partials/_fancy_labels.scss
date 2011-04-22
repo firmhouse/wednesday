@@ -1,0 +1,10 @@
+.input.fancy_label {
+  position: relative;
+  label {
+    position: absolute; 
+    line-height: 40px; 
+    left: 8px; 
+    font-size: 18px;
+    cursor: text;
+  }
+}
