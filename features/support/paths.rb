@@ -10,6 +10,12 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    
+    when /the idea page/
+      idea_path(@idea)
+    
+    when /the edit page for the idea/
+      edit_idea_path(@idea)
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

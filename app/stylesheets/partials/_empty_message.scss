@@ -1,0 +1,16 @@
+.empty_message {
+  border: 1px dashed #e0e0e0;
+  @include clearfix;
+  margin: 50px;
+  text-align: center;
+  @include border-radius;
+  h1 {
+    font-weight: bold;
+  }
+  p {
+    margin: 10px 20px;
+  }
+  p.buttons {
+    margin: 20px;
+  }
+}

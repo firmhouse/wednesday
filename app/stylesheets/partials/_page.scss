@@ -32,6 +32,7 @@ body {
   a {
     color: #555;
     text-decoration: none;
+    margin-left: 20px;
   }
   a:hover {
     color: #000;
@@ -40,10 +41,11 @@ body {
 
 body.two-col #container.content_area {
   margin-top: 20px;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   background-color: #FFF;
   @include border-radius(3px);
   margin-bottom: 50px;
+  @include box-shadow(#e0e0e0, 0, 2px, 1px);
 }
 
 h1 {
@@ -53,11 +55,59 @@ h1 {
 
 .submit {
   font-size: 13px;
-  a.cancel {
-    color: red;
-  }
+}
+
+a.cancel {
+  color: red;
 }
 
 p {
   margin: 15px 0;
+}
+
+.back_link {
+  margin-top: 10px;
+  font-size: 13px;
+  position: relative;
+  a.back {
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 20px;
+    color: #06d;
+    border-left: 0;
+    &:hover {
+      background-color: #06d;
+      color: lighten(#06d, 55%);
+      border-left: 0;
+      @include text-shadow(darken(#06d, 20%), 0, 1px, 1px);
+      @include box-shadow(#ccc, 0, 2px, 2px);
+    }
+    &:active {
+      @include box-shadow(#FFF, 0, 2px, 2px);
+    }
+  }
+  a {
+    padding: 6px;
+    @include inline-block;
+  }
+  .manage {
+    position: absolute;
+    right: 0;
+    @include inline-block;
+    a.cancel {
+      color: red;
+      &:hover {
+        background-color: red;
+        color: #FFF;
+        text-decoration: none;
+      }
+    }
+    a {
+      color: #06d;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      };
+    }
+  }
 }

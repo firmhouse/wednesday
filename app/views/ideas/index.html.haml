@@ -1,4 +1,16 @@
-test
+- if @ideas.blank?
+  .empty_message
+    %h1 No ideas yet
+    %p Your team ideas will be listed on this page but no ideas where added yet. Be the first to add one.
+    %p.buttons= link_to "Add an idea", new_idea_path, :class => 'button', :style => "font-size: 18px;"
+- else
+  .ideas
+    - @ideas.each do |idea|
+      .idea
+        %h1= link_to idea.title, idea_path(idea)
+        %p= truncate(idea.description, :length => 400)
+        %p.buttons= link_to "View this idea", idea_path(idea), :class => "button"
 
 - content_for :sidebar do
-  %p= link_to "Add a new idea", new_idea_path, :class => "button"
+  - if @ideas.any?
+    %p= link_to "Add a new idea", new_idea_path, :class => "button"

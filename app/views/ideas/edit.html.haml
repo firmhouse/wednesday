@@ -1,4 +1,4 @@
-%h1 Add a new idea
+%h1 Edit the idea
 
 = form_for(@idea) do |form|
   - if @idea.errors.any?
@@ -16,6 +16,6 @@
     = form.text_area :description, :style => "height: 400px;"
   
   .submit
-    = submit_tag "Add this idea", :class => "button"
+    = submit_tag "Save Changes", :class => "button"
     or
-    = link_to "Cancel", ideas_path, :class => "cancel"
+    = link_to "Cancel", :back, :class => "cancel"

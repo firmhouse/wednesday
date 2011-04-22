@@ -1,8 +1,33 @@
 require 'spec_helper'
 
 describe IdeasController do
+    
+  describe "GET index" do
+    
+    it "loads all ideas into @ideas" do
+      idea = mock_model(Idea)
+      Idea.should_receive(:all_by_newest).and_return([idea])
+      get :index
+      assigns(:ideas).should == [idea]
+    end
+    
+  end
   
-  render_views
+  describe "GET show" do
+    
+    it "fetches the idea" do
+      Idea.should_receive(:find).with(20)
+      get :show, :id => 20
+    end
+    
+    it "assigns @idea" do
+      idea = mock_model(Idea)
+      Idea.should_receive(:find).and_return(idea)
+      get :show, :id => 20
+      assigns(:idea).should eq(idea)
+    end
+    
+  end
   
   describe "GET new" do
     
@@ -58,6 +83,68 @@ describe IdeasController do
         response.should render_template("new")
       end
       
+    end
+    
+  end
+  
+  describe "POST destroy" do
+    
+    let(:idea) { mock_model(Idea).as_null_object }
+    
+    it "finds the idea" do
+      Idea.should_receive(:find).with(20).and_return(idea)
+      post :destroy, :id => 20
+    end
+    
+    it "destroys the idea" do
+      Idea.should_receive(:find).and_return(idea)
+      idea.should_receive(:destroy)
+      post :destroy, :id => 20
+    end
+    
+    it "redirects to the ideas index" do
+      Idea.should_receive(:find).and_return(idea)
+      post :destroy, :id => 20
+      response.should redirect_to(:action => "index")
+    end
+    
+  end
+  
+  describe "GET edit" do
+    
+    it "finds the idea" do
+      Idea.should_receive(:find).with(20)
+      get :edit, :id => 20
+    end
+    
+    it "assigns @idea" do
+      idea = mock_model(Idea)
+      Idea.should_receive(:find).and_return(idea)
+      get :edit, :id => 20
+      assigns(:idea).should eq(idea)
+    end
+    
+  end
+  
+  describe "PUT update" do
+    
+    let(:idea) { idea = mock_model(Idea).as_null_object }
+    
+    it "finds the idea" do
+      Idea.should_receive(:find).with(20).and_return(idea)
+      put :update, :id => 20
+    end
+    
+    it "updates the attributes" do
+      Idea.should_receive(:find).and_return(idea)
+      idea.should_receive(:update_attributes).with({"title" => "Modified title"})
+      put :update, :id => 20, :idea => { :title => "Modified title"}
+    end
+    
+    it "redirects to the show action" do
+      Idea.should_receive(:find).and_return(idea)
+      put :update, :id => 20
+      response.should redirect_to(:action => "show", :id => idea.id)
     end
     
   end
