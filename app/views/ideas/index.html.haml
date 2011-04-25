@@ -8,7 +8,6 @@
     - @ideas.each do |idea|
       .idea
         %h1= link_to idea.title, idea_path(idea)
-        %p= truncate(idea.description, :length => 400)
         %p.buttons= link_to "View this idea", idea_path(idea), :class => "button"
 
 - content_for :sidebar do

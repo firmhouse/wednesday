@@ -15,7 +15,6 @@ end
 
 Then /^I should see the idea$/ do
   page.should have_content(@idea.title)
-  page.should have_content(@idea.description)
   page.should have_link(@idea.title, :href => idea_path(@idea))
   page.should have_link("View this idea", :href => idea_path(@idea))
 end
