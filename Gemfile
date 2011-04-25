@@ -6,6 +6,7 @@ gem "barista"
 gem "jquery-rails"
 gem "compass"
 gem "haml"
+gem "devise"
 
 group :development, :test do
   gem "cucumber"

@@ -1,0 +1,23 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
+<% if resource.errors.any? -%>
+  <div class="alert">
+    %p.header Cannot save this idea, please correct the following:
+    - @idea.errors.full_messages.each do |error|
+      %p.message= error
+  </div>
+<% end %>
+
+  <div class="input fancy_label"><%= f.label :email %>
+  <%= f.email_field :email %></div>
+
+  <div class="input fancy_label"><%= f.label :password %>
+  <%= f.password_field :password %></div>
+
+  <div class="input fancy_label"><%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %></div>
+
+  <div class="submit"><%= f.submit "Create my account", :class => "button" %></div>
+<% end %>

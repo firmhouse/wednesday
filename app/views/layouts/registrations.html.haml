@@ -1,0 +1,21 @@
+!!! html5
+%html
+  %head
+    %title Wednesday
+    
+    = stylesheet_link_tag 'compiled/outside.css', :media => 'screen, projection'
+    = stylesheet_link_tag 'compiled/print.css', :media => 'print'
+    /[if lt IE 8]
+      = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
+  
+    = javascript_include_tag "jquery.min", "rails", "fancy_labels"
+    = csrf_meta_tag
+    
+  %body
+  
+    #container
+      #logo
+        = link_to "Wednesday", root_path
+    
+      #box
+        = yield
