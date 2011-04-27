@@ -1,7 +1,8 @@
 .back_link
   = link_to "&larr; Back to all ideas".html_safe, ideas_path, :class => 'back'
   .manage
-    = link_to "Edit this idea", edit_idea_path(@idea)
+    = link_to "Edit this idea", edit_idea_path(@idea), :class => "edit"
+    or
     = link_to "Remove", idea_path(@idea), :method => :delete, :confirm => "Are you sure you want to delete this idea?", :class => "cancel"
 
 .idea

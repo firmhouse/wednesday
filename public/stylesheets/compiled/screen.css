@@ -566,22 +566,22 @@ p {
 }
 /* line 115, ../../../app/stylesheets/partials/_page.scss */
 .back_link a {
-  padding: 8px;
+  padding: 6px;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
+  vertical-align: baseline;
 }
 /* line 7, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
 .back_link a {
   *display: inline;
 }
-/* line 119, ../../../app/stylesheets/partials/_page.scss */
+/* line 120, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage {
   position: absolute;
   right: 0;
-  background-color: #f0f0f0;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -601,14 +601,41 @@ p {
 /* line 125, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a.cancel {
   color: red;
+  padding: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  -khtml-border-radius: 0;
+  border-radius: 0;
+  margin-left: 5px;
+  padding: 1px 2px;
 }
-/* line 127, ../../../app/stylesheets/partials/_page.scss */
+/* line 129, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a.cancel:hover {
-  background-color: red;
   color: #FFF;
   text-decoration: none;
+  background-color: red;
 }
-/* line 133, ../../../app/stylesheets/partials/_page.scss */
+/* line 134, ../../../app/stylesheets/partials/_page.scss */
+.back_link .manage a.cancel:active {
+  background-color: #ff6666;
+}
+/* line 140, ../../../app/stylesheets/partials/_page.scss */
+.back_link .manage a.edit {
+  border: 1px dashed #f0f0f0;
+  margin-right: 5px;
+  font-size: 14px;
+}
+/* line 143, ../../../app/stylesheets/partials/_page.scss */
+.back_link .manage a.edit:hover {
+  border: 1px solid #06d;
+}
+/* line 147, ../../../app/stylesheets/partials/_page.scss */
+.back_link .manage a.edit:active {
+  background-color: #117fff;
+}
+/* line 151, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a {
   color: #06d;
   text-decoration: none;
@@ -619,7 +646,7 @@ p {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 137, ../../../app/stylesheets/partials/_page.scss */
+/* line 155, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a:hover {
   background-color: #06d;
   color: #FFF;
