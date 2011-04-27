@@ -19,10 +19,36 @@ body.bp {
 
 @import "compass/css3";
 
-body {
-  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-  background-color: #f0f0f0;
+$primary_color: #e9e0e0;
+
+
+html {
+  font-family: "Helvetica Nueue", sans-serif;
+  background-color: $primary_color;
+/*  background-image: url(/images/background_glow.png);*/
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+#glow {
+  @include radial-gradient(color-stops(opacify(lighten($primary_color,10%), 0.3), opacify(lighten($primary_color, 2%), 0.05) 500px));
+}
+
+#noise {
   background-image: url(/images/background.png);
+}
+
+#glow,#noise {
+  background-position: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 #header {

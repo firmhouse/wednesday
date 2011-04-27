@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Fri, 22 Apr 2011 16:43:12 GMT from
+/* DO NOT MODIFY. This file was compiled Tue, 26 Apr 2011 19:10:22 GMT from
  * /Users/michiel/Code/wednesday/app/coffeescripts/fancy_labels.coffee
  */
 
@@ -20,7 +20,7 @@
     _results = [];
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       input = _ref[_i];
-      _results.push($(input).val().length > 0 ? $(input).parent('.fancy_label').find('label').hide() : void 0);
+      _results.push($(input).val().length > 0 ? $(input).parents('.fancy_label').find('label').hide() : void 0);
     }
     return _results;
   });

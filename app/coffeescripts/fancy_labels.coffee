@@ -9,4 +9,4 @@ $(document).ready ->
     $(this).parents('.fancy_label').find('input').focus()
     
   for input in $(".fancy_label input, .fancy_label textarea")
-    $(input).parent('.fancy_label').find('label').hide() if $(input).val().length > 0
+    $(input).parents('.fancy_label').find('label').hide() if $(input).val().length > 0

@@ -7,11 +7,11 @@
       - @idea.errors.full_messages.each do |error|
         %p.message= error
 
-  .input.fancy_label
+  .input.text.fancy_label
     = form.label :title, "Summarize the idea"
     = form.text_field :title, :class => "title"
   
-  .input.fancy_label
+  .input.text.fancy_label
     = form.label :description, "Describe the idea"
     = form.text_area :description, :style => "height: 400px;"
   

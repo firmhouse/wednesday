@@ -5,9 +5,9 @@
 /* line 3, ../../../app/stylesheets/partials/_fancy_labels.scss */
 .input.fancy_label label {
   position: absolute;
-  line-height: 40px;
+  line-height: 35px;
   left: 8px;
-  font-size: 18px;
+  font-size: 14px;
   cursor: text;
 }
 
@@ -18,15 +18,15 @@
 /* line 3, ../../../app/stylesheets/partials/_fancy_labels.scss */
 .input.fancy_label label {
   position: absolute;
-  line-height: 40px;
+  line-height: 35px;
   left: 8px;
-  font-size: 18px;
+  font-size: 14px;
   cursor: text;
 }
 
 /* line 4, ../../../app/stylesheets/partials/_form.scss */
 form .input {
-  margin: 10px 20px;
+  margin: 15px 20px;
 }
 /* line 6, ../../../app/stylesheets/partials/_form.scss */
 form .input label {
@@ -34,34 +34,46 @@ form .input label {
   font-size: 16px;
   line-height: 30px;
 }
-/* line 12, ../../../app/stylesheets/partials/_form.scss */
-form .input input {
+/* line 15, ../../../app/stylesheets/partials/_form.scss */
+form .input.text input, form .input.text textarea {
+  font-family: "Helvetica Neue", sans-serif;
+}
+/* line 19, ../../../app/stylesheets/partials/_form.scss */
+form .input.text input {
   font-size: 14px;
   padding: 5px;
   width: 578px;
 }
-/* line 16, ../../../app/stylesheets/partials/_form.scss */
-form .input input.title {
+/* line 23, ../../../app/stylesheets/partials/_form.scss */
+form .input.text input.title {
   font-size: 18px;
 }
-/* line 21, ../../../app/stylesheets/partials/_form.scss */
-form .input textarea {
+/* line 28, ../../../app/stylesheets/partials/_form.scss */
+form .input.text textarea {
   font-size: 14px;
   padding: 5px;
   width: 580px;
   -webkit-appearance: textfield;
 }
-/* line 29, ../../../app/stylesheets/partials/_form.scss */
+/* line 36, ../../../app/stylesheets/partials/_form.scss */
+form .input.checkbox label {
+  font-size: 12px;
+}
+/* line 40, ../../../app/stylesheets/partials/_form.scss */
 form .submit {
   margin: 10px 20px;
   margin-bottom: 20px;
   font-size: 14px;
 }
-/* line 33, ../../../app/stylesheets/partials/_form.scss */
+/* line 44, ../../../app/stylesheets/partials/_form.scss */
 form .submit .button {
   font-size: 14px;
 }
-/* line 39, ../../../app/stylesheets/partials/_form.scss */
+/* line 49, ../../../app/stylesheets/partials/_form.scss */
+form .center {
+  text-align: center;
+}
+/* line 54, ../../../app/stylesheets/partials/_form.scss */
 form .field_with_errors label {
   color: #a00;
 }
@@ -118,56 +130,112 @@ form .field_with_errors label {
   background-image: linear-gradient(top, #e0e0e0 0%, #f5f5f5 100%);
 }
 
-/* line 6, ../../../app/stylesheets/outside.scss */
-body {
+/* line 1, ../../../app/stylesheets/partials/_flashes.scss */
+.alert {
+  margin: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #ffe5e5;
+  border: 1px solid #ffd6d6;
+  color: #a00;
+  -moz-box-shadow: #ededed 0 2px 2px 0;
+  -webkit-box-shadow: #ededed 0 2px 2px 0;
+  -o-box-shadow: #ededed 0 2px 2px 0;
+  box-shadow: #ededed 0 2px 2px 0;
+}
+/* line 8, ../../../app/stylesheets/partials/_flashes.scss */
+.alert p {
+  margin: 10px;
+  line-height: 1.5em;
+}
+/* line 13, ../../../app/stylesheets/partials/_flashes.scss */
+.alert p.header {
+  text-shadow: white 0 1px 0;
+}
+/* line 17, ../../../app/stylesheets/partials/_flashes.scss */
+.alert p.message {
+  color: #000;
+  font-size: 13px;
+}
+
+/* line 10, ../../../app/stylesheets/outside.scss */
+html {
   font-family: "Helvetica Nueue", sans-serif;
+  background-color: #e9e0e0;
+  /*  background-image: url(/images/background_glow.png);*/
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 19, ../../../app/stylesheets/outside.scss */
+#glow {
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, color-stop(0%, #fefefe), color-stop(100%, #ede6e6));
+  background-image: -moz-radial-gradient(center center, circle, #fefefe 0%, #ede6e6 500px);
+  background-image: radial-gradient(center center, circle, #fefefe 0%, #ede6e6 500px);
+}
+
+/* line 23, ../../../app/stylesheets/outside.scss */
+#noise {
   background-image: url(/images/background.png);
 }
 
-/* line 11, ../../../app/stylesheets/outside.scss */
+/* line 27, ../../../app/stylesheets/outside.scss */
+#glow, #noise {
+  background-position: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+/* line 39, ../../../app/stylesheets/outside.scss */
 #container {
   width: 400px;
   margin: auto;
   margin-top: 50px;
 }
-/* line 12, ../../../app/stylesheets/outside.scss */
+/* line 40, ../../../app/stylesheets/outside.scss */
 #container #logo {
   font-weight: bold;
   font-size: 40px;
   text-shadow: white 0 1px 0;
   text-align: center;
 }
-/* line 16, ../../../app/stylesheets/outside.scss */
+/* line 46, ../../../app/stylesheets/outside.scss */
 #container #logo a {
-  color: #555;
+  color: #583f3f;
   text-decoration: none;
 }
-/* line 20, ../../../app/stylesheets/outside.scss */
+/* line 51, ../../../app/stylesheets/outside.scss */
 #container #logo a:hover {
   color: #000;
 }
-/* line 28, ../../../app/stylesheets/outside.scss */
+/* line 59, ../../../app/stylesheets/outside.scss */
 #container #box {
   margin-top: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #e5dada;
   background-color: #FFF;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
   margin-bottom: 50px;
-  -moz-box-shadow: #e0e0e0 0 2px 1px 0;
-  -webkit-box-shadow: #e0e0e0 0 2px 1px 0;
-  -o-box-shadow: #e0e0e0 0 2px 1px 0;
-  box-shadow: #e0e0e0 0 2px 1px 0;
+  -moz-box-shadow: #e9e0e0 0 2px 5px 0;
+  -webkit-box-shadow: #e9e0e0 0 2px 5px 0;
+  -o-box-shadow: #e9e0e0 0 2px 5px 0;
+  box-shadow: #e9e0e0 0 2px 5px 0;
 }
-/* line 39, ../../../app/stylesheets/outside.scss */
-#container form .input input, #container form .input textarea {
+/* line 70, ../../../app/stylesheets/outside.scss */
+#container form .input.text input, #container form .input.text textarea {
   width: 95%;
 }
-/* line 45, ../../../app/stylesheets/outside.scss */
+/* line 76, ../../../app/stylesheets/outside.scss */
 #container h2 {
   margin: 10px 20px;
   margin-top: 20px;

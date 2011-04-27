@@ -329,7 +329,7 @@ body.bp .bottom {
 }
 /* line 8, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_debug.scss */
 body.bp .showgrid {
-  background: url('/images/grid.png?1303753951');
+  background: url('/images/grid.png?1303319023');
 }
 /* line 4, ../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
 body.bp .error {
@@ -441,31 +441,59 @@ body.bp form.inline p {
   margin-bottom: 0;
 }
 
-/* line 22, ../../../app/stylesheets/partials/_page.scss */
-body {
-  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-  background-color: #f0f0f0;
+/* line 25, ../../../app/stylesheets/partials/_page.scss */
+html {
+  font-family: "Helvetica Nueue", sans-serif;
+  background-color: #e9e0e0;
+  /*  background-image: url(/images/background_glow.png);*/
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 34, ../../../app/stylesheets/partials/_page.scss */
+#glow {
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, color-stop(0%, #fefefe), color-stop(100%, #ede6e6));
+  background-image: -moz-radial-gradient(center center, circle, #fefefe 0%, #ede6e6 500px);
+  background-image: radial-gradient(center center, circle, #fefefe 0%, #ede6e6 500px);
+}
+
+/* line 38, ../../../app/stylesheets/partials/_page.scss */
+#noise {
   background-image: url(/images/background.png);
 }
 
-/* line 28, ../../../app/stylesheets/partials/_page.scss */
+/* line 42, ../../../app/stylesheets/partials/_page.scss */
+#glow, #noise {
+  background-position: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+/* line 54, ../../../app/stylesheets/partials/_page.scss */
 #header {
   font-weight: bold;
   font-size: 40px;
   text-shadow: white 0 1px 0;
 }
-/* line 32, ../../../app/stylesheets/partials/_page.scss */
+/* line 58, ../../../app/stylesheets/partials/_page.scss */
 #header a {
   color: #555;
   text-decoration: none;
   margin-left: 20px;
 }
-/* line 37, ../../../app/stylesheets/partials/_page.scss */
+/* line 63, ../../../app/stylesheets/partials/_page.scss */
 #header a:hover {
   color: #000;
 }
 
-/* line 42, ../../../app/stylesheets/partials/_page.scss */
+/* line 68, ../../../app/stylesheets/partials/_page.scss */
 body.two-col #container.content_area {
   margin-top: 20px;
   border: 1px solid #ccc;
@@ -483,34 +511,34 @@ body.two-col #container.content_area {
   box-shadow: #e0e0e0 0 2px 1px 0;
 }
 
-/* line 51, ../../../app/stylesheets/partials/_page.scss */
+/* line 77, ../../../app/stylesheets/partials/_page.scss */
 h1 {
   font-size: 24px;
   margin: 20px;
 }
 
-/* line 56, ../../../app/stylesheets/partials/_page.scss */
+/* line 82, ../../../app/stylesheets/partials/_page.scss */
 .submit {
   font-size: 13px;
 }
 
-/* line 60, ../../../app/stylesheets/partials/_page.scss */
+/* line 86, ../../../app/stylesheets/partials/_page.scss */
 a.cancel {
   color: red;
 }
 
-/* line 64, ../../../app/stylesheets/partials/_page.scss */
+/* line 90, ../../../app/stylesheets/partials/_page.scss */
 p {
   margin: 15px 0;
 }
 
-/* line 68, ../../../app/stylesheets/partials/_page.scss */
+/* line 94, ../../../app/stylesheets/partials/_page.scss */
 .back_link {
   margin-top: 10px;
   font-size: 13px;
   position: relative;
 }
-/* line 72, ../../../app/stylesheets/partials/_page.scss */
+/* line 98, ../../../app/stylesheets/partials/_page.scss */
 .back_link a.back {
   text-decoration: none;
   padding-right: 10px;
@@ -518,7 +546,7 @@ p {
   color: #06d;
   border-left: 0;
 }
-/* line 78, ../../../app/stylesheets/partials/_page.scss */
+/* line 104, ../../../app/stylesheets/partials/_page.scss */
 .back_link a.back:hover {
   background-color: #06d;
   color: #f7faff;
@@ -529,14 +557,14 @@ p {
   -o-box-shadow: #cccccc 0 2px 2px 0;
   box-shadow: #cccccc 0 2px 2px 0;
 }
-/* line 85, ../../../app/stylesheets/partials/_page.scss */
+/* line 111, ../../../app/stylesheets/partials/_page.scss */
 .back_link a.back:active {
   -moz-box-shadow: white 0 2px 2px 0;
   -webkit-box-shadow: white 0 2px 2px 0;
   -o-box-shadow: white 0 2px 2px 0;
   box-shadow: white 0 2px 2px 0;
 }
-/* line 89, ../../../app/stylesheets/partials/_page.scss */
+/* line 115, ../../../app/stylesheets/partials/_page.scss */
 .back_link a {
   padding: 6px;
   display: -moz-inline-box;
@@ -549,7 +577,7 @@ p {
 .back_link a {
   *display: inline;
 }
-/* line 93, ../../../app/stylesheets/partials/_page.scss */
+/* line 119, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage {
   position: absolute;
   right: 0;
@@ -563,22 +591,22 @@ p {
 .back_link .manage {
   *display: inline;
 }
-/* line 97, ../../../app/stylesheets/partials/_page.scss */
+/* line 123, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a.cancel {
   color: red;
 }
-/* line 99, ../../../app/stylesheets/partials/_page.scss */
+/* line 125, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a.cancel:hover {
   background-color: red;
   color: #FFF;
   text-decoration: none;
 }
-/* line 105, ../../../app/stylesheets/partials/_page.scss */
+/* line 131, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a {
   color: #06d;
   text-decoration: none;
 }
-/* line 108, ../../../app/stylesheets/partials/_page.scss */
+/* line 134, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a:hover {
   text-decoration: underline;
 }
@@ -590,15 +618,15 @@ p {
 /* line 3, ../../../app/stylesheets/partials/_fancy_labels.scss */
 .input.fancy_label label {
   position: absolute;
-  line-height: 40px;
+  line-height: 35px;
   left: 8px;
-  font-size: 18px;
+  font-size: 14px;
   cursor: text;
 }
 
 /* line 4, ../../../app/stylesheets/partials/_form.scss */
 form .input {
-  margin: 10px 20px;
+  margin: 15px 20px;
 }
 /* line 6, ../../../app/stylesheets/partials/_form.scss */
 form .input label {
@@ -606,34 +634,46 @@ form .input label {
   font-size: 16px;
   line-height: 30px;
 }
-/* line 12, ../../../app/stylesheets/partials/_form.scss */
-form .input input {
+/* line 15, ../../../app/stylesheets/partials/_form.scss */
+form .input.text input, form .input.text textarea {
+  font-family: "Helvetica Neue", sans-serif;
+}
+/* line 19, ../../../app/stylesheets/partials/_form.scss */
+form .input.text input {
   font-size: 14px;
   padding: 5px;
   width: 578px;
 }
-/* line 16, ../../../app/stylesheets/partials/_form.scss */
-form .input input.title {
+/* line 23, ../../../app/stylesheets/partials/_form.scss */
+form .input.text input.title {
   font-size: 18px;
 }
-/* line 21, ../../../app/stylesheets/partials/_form.scss */
-form .input textarea {
+/* line 28, ../../../app/stylesheets/partials/_form.scss */
+form .input.text textarea {
   font-size: 14px;
   padding: 5px;
   width: 580px;
   -webkit-appearance: textfield;
 }
-/* line 29, ../../../app/stylesheets/partials/_form.scss */
+/* line 36, ../../../app/stylesheets/partials/_form.scss */
+form .input.checkbox label {
+  font-size: 12px;
+}
+/* line 40, ../../../app/stylesheets/partials/_form.scss */
 form .submit {
   margin: 10px 20px;
   margin-bottom: 20px;
   font-size: 14px;
 }
-/* line 33, ../../../app/stylesheets/partials/_form.scss */
+/* line 44, ../../../app/stylesheets/partials/_form.scss */
 form .submit .button {
   font-size: 14px;
 }
-/* line 39, ../../../app/stylesheets/partials/_form.scss */
+/* line 49, ../../../app/stylesheets/partials/_form.scss */
+form .center {
+  text-align: center;
+}
+/* line 54, ../../../app/stylesheets/partials/_form.scss */
 form .field_with_errors label {
   color: #a00;
 }

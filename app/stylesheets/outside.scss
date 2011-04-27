@@ -2,21 +2,52 @@
 @import "partials/fancy_labels";
 @import "partials/form";
 @import "partials/button";
+@import "partials/flashes";
 
-body {
+$primary_color: #e0ebe0;
+$primary_color: #e9e0e0;
+
+html {
   font-family: "Helvetica Nueue", sans-serif;
+  background-color: $primary_color;
+/*  background-image: url(/images/background_glow.png);*/
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+#glow {
+  @include radial-gradient(color-stops(opacify(lighten($primary_color,10%), 0.3), opacify(lighten($primary_color, 2%), 0.05) 500px));
+}
+
+#noise {
   background-image: url(/images/background.png);
+}
+
+#glow,#noise {
+  background-position: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 #container {
   #logo {
     font-weight: bold;
     font-size: 40px;
-    @include text-shadow(#fff, 0, 1px, 0);
+    $color-lightness: lightness($primary_color) < 20%;
+    
+    @include text-shadow(lighten($primary_color, 30%), 0, 1px, 0);
     a {
-      color: #555;
+      color: darken($primary_color, 60%);
       text-decoration: none;
     }
+    
     a:hover {
       color: #000;
     }
@@ -27,15 +58,15 @@ body {
   margin-top: 50px;
   #box {
     margin-top: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid darken($primary_color, 2%);
     background-color: #FFF;
-    @include border-radius(3px);
+    @include border-radius(5px);
     margin-bottom: 50px;
-    @include box-shadow(#e0e0e0, 0, 2px, 1px);
+    @include box-shadow(opacify($primary_color, 0.05), 0, 2px, 5px);
   }
   
   form {
-    .input {
+    .input.text {
       input, textarea {
         width: 95%;
       }

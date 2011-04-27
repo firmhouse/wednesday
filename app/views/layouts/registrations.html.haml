@@ -12,10 +12,13 @@
     = csrf_meta_tag
     
   %body
+    #glow
+    
+    #noise
   
     #container
       #logo
-        = link_to "Wednesday", root_path
-    
+        = link_to "Wednesday", new_user_session_path
+  
       #box
         = yield
