@@ -623,7 +623,7 @@ p {
 }
 /* line 140, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a.edit {
-  border: 1px dashed #f0f0f0;
+  border: 1px dashed #e0e0e0;
   margin-right: 5px;
   font-size: 14px;
 }
