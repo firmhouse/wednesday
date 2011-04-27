@@ -566,7 +566,7 @@ p {
 }
 /* line 115, ../../../app/stylesheets/partials/_page.scss */
 .back_link a {
-  padding: 6px;
+  padding: 8px;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -581,6 +581,13 @@ p {
 .back_link .manage {
   position: absolute;
   right: 0;
+  background-color: #f0f0f0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -591,24 +598,31 @@ p {
 .back_link .manage {
   *display: inline;
 }
-/* line 123, ../../../app/stylesheets/partials/_page.scss */
+/* line 125, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a.cancel {
   color: red;
 }
-/* line 125, ../../../app/stylesheets/partials/_page.scss */
+/* line 127, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a.cancel:hover {
   background-color: red;
   color: #FFF;
   text-decoration: none;
 }
-/* line 131, ../../../app/stylesheets/partials/_page.scss */
+/* line 133, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a {
   color: #06d;
   text-decoration: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
 }
-/* line 134, ../../../app/stylesheets/partials/_page.scss */
+/* line 137, ../../../app/stylesheets/partials/_page.scss */
 .back_link .manage a:hover {
-  text-decoration: underline;
+  background-color: #06d;
+  color: #FFF;
 }
 
 /* line 1, ../../../app/stylesheets/partials/_fancy_labels.scss */
@@ -652,28 +666,29 @@ form .input.text input.title {
 form .input.text textarea {
   font-size: 14px;
   padding: 5px;
+  line-height: 1.5em;
   width: 580px;
   -webkit-appearance: textfield;
 }
-/* line 36, ../../../app/stylesheets/partials/_form.scss */
+/* line 37, ../../../app/stylesheets/partials/_form.scss */
 form .input.checkbox label {
   font-size: 12px;
 }
-/* line 40, ../../../app/stylesheets/partials/_form.scss */
+/* line 41, ../../../app/stylesheets/partials/_form.scss */
 form .submit {
   margin: 10px 20px;
   margin-bottom: 20px;
   font-size: 14px;
 }
-/* line 44, ../../../app/stylesheets/partials/_form.scss */
+/* line 45, ../../../app/stylesheets/partials/_form.scss */
 form .submit .button {
   font-size: 14px;
 }
-/* line 49, ../../../app/stylesheets/partials/_form.scss */
+/* line 50, ../../../app/stylesheets/partials/_form.scss */
 form .center {
   text-align: center;
 }
-/* line 54, ../../../app/stylesheets/partials/_form.scss */
+/* line 55, ../../../app/stylesheets/partials/_form.scss */
 form .field_with_errors label {
   color: #a00;
 }

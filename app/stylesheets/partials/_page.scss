@@ -113,12 +113,14 @@ p {
     }
   }
   a {
-    padding: 6px;
+    padding: 8px;
     @include inline-block;
   }
   .manage {
     position: absolute;
     right: 0;
+    background-color: #f0f0f0;
+    @include border-radius;
     @include inline-block;
     a.cancel {
       color: red;
@@ -131,8 +133,10 @@ p {
     a {
       color: #06d;
       text-decoration: none;
+      @include border-radius;
       &:hover {
-        text-decoration: underline;
+        background-color: #06d;
+        color: #FFF;
       };
     }
   }

@@ -52,28 +52,29 @@ form .input.text input.title {
 form .input.text textarea {
   font-size: 14px;
   padding: 5px;
+  line-height: 1.5em;
   width: 580px;
   -webkit-appearance: textfield;
 }
-/* line 36, ../../../app/stylesheets/partials/_form.scss */
+/* line 37, ../../../app/stylesheets/partials/_form.scss */
 form .input.checkbox label {
   font-size: 12px;
 }
-/* line 40, ../../../app/stylesheets/partials/_form.scss */
+/* line 41, ../../../app/stylesheets/partials/_form.scss */
 form .submit {
   margin: 10px 20px;
   margin-bottom: 20px;
   font-size: 14px;
 }
-/* line 44, ../../../app/stylesheets/partials/_form.scss */
+/* line 45, ../../../app/stylesheets/partials/_form.scss */
 form .submit .button {
   font-size: 14px;
 }
-/* line 49, ../../../app/stylesheets/partials/_form.scss */
+/* line 50, ../../../app/stylesheets/partials/_form.scss */
 form .center {
   text-align: center;
 }
-/* line 54, ../../../app/stylesheets/partials/_form.scss */
+/* line 55, ../../../app/stylesheets/partials/_form.scss */
 form .field_with_errors label {
   color: #a00;
 }
